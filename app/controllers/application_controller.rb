@@ -37,5 +37,20 @@ class ApplicationController < Sinatra::Base
     else
       halt 403, { errors: user.errors.full_messages }.to_json
     end
-  end  
+  end 
+   # login user
+post '/login' do
+  user = User.find_by(name: params[:name])
+  if user && user.authenticate(params[:password])
+    session[:user_id] = user.id
+    {
+        message: 'User logged in successfully', 
+        userId: user.id,
+        name: user.name
+    }.to_json
+  else
+    halt 403, { error: 'Invalid username or password' }.to_json
+  end
+end
+
 end
