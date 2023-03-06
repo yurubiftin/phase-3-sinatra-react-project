@@ -1,6 +1,7 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
-  
+  enable :sessions
+
   # Add your routes here
   get '/movies' do
     movies = Movie.all
@@ -24,4 +25,17 @@ class ApplicationController < Sinatra::Base
     movie = Movie.find(params[:id])
     movie.destroy
   end
+  post '/users' do
+    user = User.new(
+      name: params[:name],
+      email: params[:email],
+      password: params[:password]
+    )
+    if user.save
+      session[:user_id] = user.id
+      { message: 'User registered successfully' }.to_json
+    else
+      halt 403, { errors: user.errors.full_messages }.to_json
+    end
+  end  
 end
