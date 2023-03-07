@@ -42,7 +42,6 @@ class ApplicationController < Sinatra::Base
 post '/login' do
   user = User.find_by(name: params[:name])
   if user && user.authenticate(params[:password])
-    session[:user_id] = user.id
     {
         message: 'User logged in successfully', 
         userId: user.id,

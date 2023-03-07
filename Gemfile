@@ -38,8 +38,10 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.18'
 
 
 # These gems will only be used when we are running the application locally
-group :development do
+group :development , :production do
   gem "pry", "~> 0.14.1"
+  gem "faker"
+  ruby '2.7.4'
 
   # Automatically reload when there are changes
   # https://github.com/alexch/rerun
