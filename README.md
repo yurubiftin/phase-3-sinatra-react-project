@@ -121,11 +121,12 @@ Database schema definitions.
       "user": {
         "username": "eva"
       }
+     }
     ]
    }
    ```
 5. `/users/:id/movies/:movie_id` - Update an existing and users movie.
-6. `/movies/:id/users/:user_id` - Delete a TODO item.
+6. `/movies/:id/users/:user_id` - Delete a movie.
 ## LICENSE
 This repository is distributed under the MIT License
 ```markdown
