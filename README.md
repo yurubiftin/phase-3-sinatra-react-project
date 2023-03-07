@@ -1,16 +1,12 @@
 # Movie finder
-The Movie Generator is a server-side API built using Ruby's Sinatra DSL, as part of the Moringa School Phase-3 project.
+The Movie finder is a server-side API built using Ruby's Sinatra DSL, as part of the Moringa School Phase-3 project.
 The API follows the MVC design pattern, and it provides a backend for a React-based frontend.
 The API supports all CRUD operations, including POST, DELETE, and PATCH, as well as authentication for secure user access.
 Here are the links to the repositories and the live link to the project:
  - [Frontend repository] `https://github.com/yurubiftin/movie-finder-project-frontend-setup`
  - [Backend repository] `https://github.com/yurubiftin/phase-3-sinatra-react-project`
  - [Live link] `https://movie-finder-project-frontend-setup.vercel.app/`
-## Pre-Requisites
-In order to use this repository you will need the following:
-- Operating System **(Windows `10+`, Linux `3.8+`, or MacOS X `10.7+`)**
-- RAM >= 4GB
-- Free Space >= 2GB
+
 ## Built With
 This application has been built with the following tools:
 ![ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
@@ -19,7 +15,6 @@ This application has been built with the following tools:
 - **SQlite3 `v1.6`**
 - **ActiveRecord `v7.0.4`**
 - **Rake `v13.0.6`**
-- **Puma `v6.1`**
 - **rerun `v0.14`**
 - **Sinatra `v3.0.5`**
 ## Setup
@@ -113,14 +108,14 @@ Database schema definitions.
       "movies": [
      {
       "id": 26,
-      "title": "How does the moon cut his hair?",
-      "message": "Eclipse it",
+      "title": "B",
+      "image_url": "url",
       "user_id": 6,
       "created_at": "2023-03-05T07:00:16.885Z",
       "updated_at": "2023-03-05T07:00:16.885Z",
-      "user": {
-        "username": "eva"
-      }
+      
+
+      
      }
     ]
    }
@@ -128,7 +123,7 @@ Database schema definitions.
 5. `/users/:id/movies/:movie_id` - Update an existing and users movie.
 6. `/movies/:id/users/:user_id` - Delete a movie.
 ## LICENSE
-This repository is distributed under the MIT License
+This repository is distributed under the ISC license
 ```markdown
 Copyright 2023 Yurub Ahmed
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”),
